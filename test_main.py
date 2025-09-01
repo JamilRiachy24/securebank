@@ -5,14 +5,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 # Imports from the pipeline
-from src.data_preprocessing import preprocess_pipeline
-from src.feature_engineering import feature_engineering_pipeline
-from src.model_selection import (
+from src.test_data_preprocessing import preprocess_pipeline
+from src.test_feature_engineering import feature_engineering_pipeline
+from src.test_model_selection import (
     load_featured_data, prepare_data, train_test_split_data,
     select_top_features_xgboost, select_best_model, evaluate_model
 )
-from src.model_training import admin_model_selection_workflow
-from src.audit import load_evaluation_logs, summarize_metrics
+from src.test_model_training import admin_model_selection_workflow
+from src.test_audit import load_evaluation_logs, summarize_metrics
 
 
 def run_full_pipeline():
